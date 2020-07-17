@@ -62,3 +62,205 @@ This may also be found at: /var/jenkins_home/secrets/initialAdminPassword
 2020-07-17 03:52:06.208+0000 [id=43]	INFO	h.m.DownloadService$Downloadable#load: Obtained the updated data file for hudson.tools.JDKInstaller
 2020-07-17 03:52:06.209+0000 [id=43]	INFO	hudson.util.Retrier#start: Performed the action check updates server successfully at the attempt #1
 2020-07-17 03:52:06.212+0000 [id=43]	INFO	hudson.model.AsyncPeriodicWork#lambda$doRun$0: Finished Download metadata. 391,632 ms
+2020-07-17 04:17:52.383+0000 [id=63]	INFO	hudson.PluginManager#install: Starting installation of a batch of 21 plugins plus their dependencies
+2020-07-17 04:17:52.393+0000 [id=96]	INFO	h.m.UpdateCenter$CompleteBatchJob#run: Completing installing of plugin batch…
+2020-07-17 04:17:52.672+0000 [id=98]	INFO	jenkins.InitReactorRunner$1#onAttained: Started initialization
+2020-07-17 04:17:52.673+0000 [id=100]	INFO	jenkins.InitReactorRunner$1#onAttained: Listed all plugins
+2020-07-17 04:17:52.673+0000 [id=100]	INFO	jenkins.InitReactorRunner$1#onAttained: Prepared all plugins
+2020-07-17 04:17:52.673+0000 [id=100]	INFO	jenkins.InitReactorRunner$1#onAttained: Started all plugins
+2020-07-17 04:17:52.673+0000 [id=100]	INFO	jenkins.InitReactorRunner$1#onAttained: Augmented all extensions
+2020-07-17 04:17:52.673+0000 [id=100]	INFO	jenkins.InitReactorRunner$1#onAttained: System config loaded
+2020-07-17 04:17:52.673+0000 [id=100]	INFO	jenkins.InitReactorRunner$1#onAttained: System config adapted
+2020-07-17 04:17:52.673+0000 [id=100]	INFO	jenkins.InitReactorRunner$1#onAttained: Loaded all jobs
+2020-07-17 04:17:52.674+0000 [id=100]	INFO	jenkins.InitReactorRunner$1#onAttained: Configuration for all jobs updated
+2020-07-17 04:17:52.674+0000 [id=100]	INFO	jenkins.InitReactorRunner$1#onAttained: Completed initialization
+2020-07-17 04:17:52.676+0000 [id=96]	INFO	h.m.UpdateCenter$CompleteBatchJob#run: Completed installation of 0 plugins in 0.29 sec
+2020-07-17 04:26:10.419+0000 [id=9]	INFO	o.internal.platform.Platform#log: ALPN callback dropped: HTTP/2 is disabled. Is alpn-boot on the boot class path?
+2020-07-17 04:27:06.175+0000 [id=104]	INFO	o.c.j.p.k.KubernetesClientProvider$SaveableListenerImpl#onChange: Invalidating Kubernetes client: kubernetes null
+2020-07-17 04:27:06.746+0000 [id=104]	INFO	o.c.j.p.k.KubernetesClientProvider$SaveableListenerImpl#onChange: Invalidating Kubernetes client: kubernetes null
+2020-07-17 04:27:07.760+0000 [id=16]	WARNING	h.d.ReverseProxySetupMonitor#getTestForReverseProxySetup: http://jenkins.linux.io/manage vs. http://jenkins.linux.io:30080/manage
+2020-07-17 04:28:34.579+0000 [id=37]	INFO	o.c.j.p.k.KubernetesCloud#provision: Excess workload after pending Kubernetes agents: 1
+2020-07-17 04:28:34.582+0000 [id=37]	INFO	o.c.j.p.k.KubernetesCloud#provision: Template for label pipline_1-9f526: pipline_1-9f526-wq9vs
+2020-07-17 04:28:34.703+0000 [id=37]	INFO	o.internal.platform.Platform#log: ALPN callback dropped: HTTP/2 is disabled. Is alpn-boot on the boot class path?
+2020-07-17 04:28:44.699+0000 [id=37]	INFO	hudson.slaves.NodeProvisioner#lambda$update$6: pipline-1-9f526-wq9vs-dth72 provisioning successfully completed. We have now 2 computer(s)
+2020-07-17 04:28:44.804+0000 [id=119]	INFO	o.c.j.p.k.KubernetesLauncher#launch: Created Pod: kube-ops/pipline-1-9f526-wq9vs-dth72
+2020-07-17 04:28:44.888+0000 [id=128]	INFO	o.internal.platform.Platform#log: ALPN callback dropped: HTTP/2 is disabled. Is alpn-boot on the boot class path?
+2020-07-17 04:28:44.900+0000 [id=128]	WARNING	i.f.k.c.d.i.WatchConnectionManager$1#onFailure: Exec Failure: HTTP 403, Status: 403 - events is forbidden: User "system:serviceaccount:kube-ops:jenkins" cannot watch resource "events" in API group "" in the namespace "kube-ops"
+java.net.ProtocolException: Expected HTTP 101 response but was '403 Forbidden'
+	at okhttp3.internal.ws.RealWebSocket.checkResponse(RealWebSocket.java:229)
+	at okhttp3.internal.ws.RealWebSocket$2.onResponse(RealWebSocket.java:196)
+	at okhttp3.RealCall$AsyncCall.execute(RealCall.java:203)
+	at okhttp3.internal.NamedRunnable.run(NamedRunnable.java:32)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1149)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:624)
+	at java.lang.Thread.run(Thread.java:748)
+2020-07-17 04:28:44.905+0000 [id=119]	INFO	o.c.j.p.k.KubernetesLauncher#eventWatch: Cannot watch events on kube-ops/pipline-1-9f526-wq9vs-dth72
+Also:   java.lang.Throwable: waiting here
+		at io.fabric8.kubernetes.client.utils.Utils.waitUntilReady(Utils.java:144)
+		at io.fabric8.kubernetes.client.dsl.internal.WatchConnectionManager.waitUntilReady(WatchConnectionManager.java:341)
+		at io.fabric8.kubernetes.client.dsl.base.BaseOperation.watch(BaseOperation.java:755)
+		at io.fabric8.kubernetes.client.dsl.base.BaseOperation.watch(BaseOperation.java:739)
+		at io.fabric8.kubernetes.client.dsl.base.BaseOperation.watch(BaseOperation.java:70)
+		at org.csanchez.jenkins.plugins.kubernetes.KubernetesLauncher.eventWatch(KubernetesLauncher.java:230)
+		at org.csanchez.jenkins.plugins.kubernetes.KubernetesLauncher.launch(KubernetesLauncher.java:138)
+		at hudson.slaves.SlaveComputer.lambda$_connect$0(SlaveComputer.java:296)
+		at jenkins.util.ContextResettingExecutorService$2.call(ContextResettingExecutorService.java:46)
+		at jenkins.security.ImpersonatingExecutorService$2.call(ImpersonatingExecutorService.java:71)
+		at java.util.concurrent.FutureTask.run(FutureTask.java:266)
+io.fabric8.kubernetes.client.KubernetesClientException: events is forbidden: User "system:serviceaccount:kube-ops:jenkins" cannot watch resource "events" in API group "" in the namespace "kube-ops"
+	at io.fabric8.kubernetes.client.dsl.internal.WatchConnectionManager$1.onFailure(WatchConnectionManager.java:203)
+	at okhttp3.internal.ws.RealWebSocket.failWebSocket(RealWebSocket.java:571)
+	at okhttp3.internal.ws.RealWebSocket$2.onResponse(RealWebSocket.java:198)
+	at okhttp3.RealCall$AsyncCall.execute(RealCall.java:203)
+	at okhttp3.internal.NamedRunnable.run(NamedRunnable.java:32)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1149)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:624)
+	at java.lang.Thread.run(Thread.java:748)
+2020-07-17 04:28:46.208+0000 [id=132]	INFO	h.TcpSlaveAgentListener$ConnectionHandler#run: Accepted JNLP4-connect connection #1 from /10.244.2.41:48240
+2020-07-17 04:28:54.572+0000 [id=39]	INFO	o.c.j.p.k.KubernetesCloud#provision: Excess workload after pending Kubernetes agents: 0
+2020-07-17 04:28:54.573+0000 [id=39]	INFO	o.c.j.p.k.KubernetesCloud#provision: Template for label pipline_1-9f526: pipline_1-9f526-wq9vs
+2020-07-17 04:28:54.969+0000 [id=119]	INFO	o.internal.platform.Platform#log: ALPN callback dropped: HTTP/2 is disabled. Is alpn-boot on the boot class path?
+2020-07-17 04:28:54.995+0000 [id=119]	WARNING	o.c.j.p.k.KubernetesLauncher#launch: Error in provisioning; agent=KubernetesSlave name: pipline-1-9f526-wq9vs-dth72, template=PodTemplate{, name='pipline_1-9f526-wq9vs', namespace='kube-ops', label='pipline_1-9f526', nodeUsageMode=EXCLUSIVE, workspaceVolume=EmptyDirWorkspaceVolume [memory=false], volumes=[HostPathVolume [mountPath=/var/run/docker.sock, hostPath=/var/run/docker.sock]], containers=[ContainerTemplate{name='docker', image='docker'}], annotations=[org.csanchez.jenkins.plugins.kubernetes.PodAnnotation@aab9c821, org.csanchez.jenkins.plugins.kubernetes.PodAnnotation@c92c82e4]}
+java.lang.IllegalStateException: Pod has terminated containers: kube-ops/pipline-1-9f526-wq9vs-dth72 (docker)
+	at org.csanchez.jenkins.plugins.kubernetes.AllContainersRunningPodWatcher.periodicAwait(AllContainersRunningPodWatcher.java:133)
+	at org.csanchez.jenkins.plugins.kubernetes.AllContainersRunningPodWatcher.periodicAwait(AllContainersRunningPodWatcher.java:154)
+	at org.csanchez.jenkins.plugins.kubernetes.AllContainersRunningPodWatcher.await(AllContainersRunningPodWatcher.java:94)
+	at org.csanchez.jenkins.plugins.kubernetes.KubernetesLauncher.launch(KubernetesLauncher.java:140)
+	at hudson.slaves.SlaveComputer.lambda$_connect$0(SlaveComputer.java:296)
+	at jenkins.util.ContextResettingExecutorService$2.call(ContextResettingExecutorService.java:46)
+	at jenkins.security.ImpersonatingExecutorService$2.call(ImpersonatingExecutorService.java:71)
+	at java.util.concurrent.FutureTask.run(FutureTask.java:266)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1149)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:624)
+	at java.lang.Thread.run(Thread.java:748)
+2020-07-17 04:28:54.996+0000 [id=119]	INFO	o.c.j.p.k.KubernetesSlave#_terminate: Terminating Kubernetes instance for agent pipline-1-9f526-wq9vs-dth72
+Terminated Kubernetes instance for agent kube-ops/pipline-1-9f526-wq9vs-dth72
+Disconnected computer pipline-1-9f526-wq9vs-dth72
+2020-07-17 04:28:55.084+0000 [id=119]	INFO	o.c.j.p.k.KubernetesSlave#deleteSlavePod: Terminated Kubernetes instance for agent kube-ops/pipline-1-9f526-wq9vs-dth72
+2020-07-17 04:28:55.084+0000 [id=119]	INFO	o.c.j.p.k.KubernetesSlave#_terminate: Disconnected computer pipline-1-9f526-wq9vs-dth72
+2020-07-17 04:28:55.094+0000 [id=119]	INFO	j.s.DefaultJnlpSlaveReceiver#channelClosed: Computer.threadPoolForRemoting [#3] for pipline-1-9f526-wq9vs-dth72 terminated: java.nio.channels.ClosedChannelException
+2020-07-17 04:29:04.573+0000 [id=36]	INFO	o.c.j.p.k.KubernetesCloud#provision: Excess workload after pending Kubernetes agents: 1
+2020-07-17 04:29:04.573+0000 [id=36]	INFO	o.c.j.p.k.KubernetesCloud#provision: Template for label pipline_1-9f526: pipline_1-9f526-wq9vs
+2020-07-17 04:29:14.653+0000 [id=119]	INFO	o.c.j.p.k.KubernetesLauncher#launch: Created Pod: kube-ops/pipline-1-9f526-wq9vs-qrlg2
+2020-07-17 04:29:14.665+0000 [id=34]	INFO	hudson.slaves.NodeProvisioner#lambda$update$6: pipline-1-9f526-wq9vs-qrlg2 provisioning successfully completed. We have now 2 computer(s)
+2020-07-17 04:29:14.727+0000 [id=177]	INFO	o.internal.platform.Platform#log: ALPN callback dropped: HTTP/2 is disabled. Is alpn-boot on the boot class path?
+2020-07-17 04:29:14.728+0000 [id=177]	WARNING	i.f.k.c.d.i.WatchConnectionManager$1#onFailure: Exec Failure: HTTP 403, Status: 403 - events is forbidden: User "system:serviceaccount:kube-ops:jenkins" cannot watch resource "events" in API group "" in the namespace "kube-ops"
+java.net.ProtocolException: Expected HTTP 101 response but was '403 Forbidden'
+	at okhttp3.internal.ws.RealWebSocket.checkResponse(RealWebSocket.java:229)
+	at okhttp3.internal.ws.RealWebSocket$2.onResponse(RealWebSocket.java:196)
+	at okhttp3.RealCall$AsyncCall.execute(RealCall.java:203)
+	at okhttp3.internal.NamedRunnable.run(NamedRunnable.java:32)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1149)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:624)
+	at java.lang.Thread.run(Thread.java:748)
+2020-07-17 04:29:15.746+0000 [id=119]	WARNING	i.f.k.c.d.i.WatchConnectionManager#close: Executor didn't terminate in time after shutdown in close(), killing it in: io.fabric8.kubernetes.client.dsl.internal.WatchConnectionManager@f490c24
+2020-07-17 04:29:15.746+0000 [id=119]	INFO	o.c.j.p.k.KubernetesLauncher#eventWatch: Cannot watch events on kube-ops/pipline-1-9f526-wq9vs-qrlg2
+Also:   java.lang.Throwable: waiting here
+		at io.fabric8.kubernetes.client.utils.Utils.waitUntilReady(Utils.java:144)
+		at io.fabric8.kubernetes.client.dsl.internal.WatchConnectionManager.waitUntilReady(WatchConnectionManager.java:341)
+		at io.fabric8.kubernetes.client.dsl.base.BaseOperation.watch(BaseOperation.java:755)
+		at io.fabric8.kubernetes.client.dsl.base.BaseOperation.watch(BaseOperation.java:739)
+		at io.fabric8.kubernetes.client.dsl.base.BaseOperation.watch(BaseOperation.java:70)
+		at org.csanchez.jenkins.plugins.kubernetes.KubernetesLauncher.eventWatch(KubernetesLauncher.java:230)
+		at org.csanchez.jenkins.plugins.kubernetes.KubernetesLauncher.launch(KubernetesLauncher.java:138)
+		at hudson.slaves.SlaveComputer.lambda$_connect$0(SlaveComputer.java:296)
+		at jenkins.util.ContextResettingExecutorService$2.call(ContextResettingExecutorService.java:46)
+		at jenkins.security.ImpersonatingExecutorService$2.call(ImpersonatingExecutorService.java:71)
+		at java.util.concurrent.FutureTask.run(FutureTask.java:266)
+io.fabric8.kubernetes.client.KubernetesClientException: events is forbidden: User "system:serviceaccount:kube-ops:jenkins" cannot watch resource "events" in API group "" in the namespace "kube-ops"
+	at io.fabric8.kubernetes.client.dsl.internal.WatchConnectionManager$1.onFailure(WatchConnectionManager.java:203)
+	at okhttp3.internal.ws.RealWebSocket.failWebSocket(RealWebSocket.java:571)
+	at okhttp3.internal.ws.RealWebSocket$2.onResponse(RealWebSocket.java:198)
+	at okhttp3.RealCall$AsyncCall.execute(RealCall.java:203)
+	at okhttp3.internal.NamedRunnable.run(NamedRunnable.java:32)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1149)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:624)
+	at java.lang.Thread.run(Thread.java:748)
+2020-07-17 04:29:15.892+0000 [id=177]	INFO	o.internal.platform.Platform#log: ALPN callback dropped: HTTP/2 is disabled. Is alpn-boot on the boot class path?
+2020-07-17 04:29:15.896+0000 [id=179]	INFO	h.TcpSlaveAgentListener$ConnectionHandler#run: Accepted JNLP4-connect connection #2 from /10.244.2.42:43328
+2020-07-17 04:29:16.205+0000 [id=128]	INFO	o.c.j.p.k.p.r.Reaper$TerminateAgentOnContainerTerminated#lambda$onEvent$1: kube-ops/pipline-1-9f526-wq9vs-qrlg2 Container docker was just terminated, so removing the corresponding Jenkins agent
+2020-07-17 04:29:16.210+0000 [id=128]	INFO	o.c.j.p.k.KubernetesSlave#_terminate: Terminating Kubernetes instance for agent pipline-1-9f526-wq9vs-qrlg2
+2020-07-17 04:29:16.223+0000 [id=128]	INFO	o.c.j.p.k.KubernetesSlave#deleteSlavePod: Terminated Kubernetes instance for agent kube-ops/pipline-1-9f526-wq9vs-qrlg2
+2020-07-17 04:29:16.223+0000 [id=128]	INFO	o.c.j.p.k.KubernetesSlave#_terminate: Disconnected computer pipline-1-9f526-wq9vs-qrlg2
+Terminated Kubernetes instance for agent kube-ops/pipline-1-9f526-wq9vs-qrlg2
+Disconnected computer pipline-1-9f526-wq9vs-qrlg2
+2020-07-17 04:29:16.964+0000 [id=159]	INFO	j.s.DefaultJnlpSlaveReceiver#channelClosed: Computer.threadPoolForRemoting [#29] for pipline-1-9f526-wq9vs-qrlg2 terminated: java.nio.channels.ClosedChannelException
+2020-07-17 04:29:16.974+0000 [id=162]	INFO	hudson.remoting.Request$2#run: Failed to send back a reply to the request hudson.remoting.Request$2@4b14cffe: hudson.remoting.ChannelClosedException: Channel "hudson.remoting.Channel@6323cec3:JNLP4-connect connection from 10.244.2.42/10.244.2.42:43328": channel is already closed
+2020-07-17 04:29:24.573+0000 [id=30]	INFO	o.c.j.p.k.KubernetesCloud#provision: Excess workload after pending Kubernetes agents: 1
+2020-07-17 04:29:24.573+0000 [id=30]	INFO	o.c.j.p.k.KubernetesCloud#provision: Template for label pipline_1-9f526: pipline_1-9f526-wq9vs
+2020-07-17 04:29:25.859+0000 [id=119]	WARNING	o.c.j.p.k.KubernetesLauncher#launch: Error in provisioning; agent=KubernetesSlave name: pipline-1-9f526-wq9vs-qrlg2, template=PodTemplate{, name='pipline_1-9f526-wq9vs', namespace='kube-ops', label='pipline_1-9f526', nodeUsageMode=EXCLUSIVE, workspaceVolume=EmptyDirWorkspaceVolume [memory=false], volumes=[HostPathVolume [mountPath=/var/run/docker.sock, hostPath=/var/run/docker.sock]], containers=[ContainerTemplate{name='docker', image='docker'}], annotations=[org.csanchez.jenkins.plugins.kubernetes.PodAnnotation@aab9c821, org.csanchez.jenkins.plugins.kubernetes.PodAnnotation@c92c82e4]}
+java.lang.IllegalStateException: Pod is no longer available: kube-ops/pipline-1-9f526-wq9vs-qrlg2
+	at org.csanchez.jenkins.plugins.kubernetes.AllContainersRunningPodWatcher.periodicAwait(AllContainersRunningPodWatcher.java:125)
+	at org.csanchez.jenkins.plugins.kubernetes.AllContainersRunningPodWatcher.periodicAwait(AllContainersRunningPodWatcher.java:154)
+	at org.csanchez.jenkins.plugins.kubernetes.AllContainersRunningPodWatcher.await(AllContainersRunningPodWatcher.java:94)
+	at org.csanchez.jenkins.plugins.kubernetes.KubernetesLauncher.launch(KubernetesLauncher.java:140)
+	at hudson.slaves.SlaveComputer.lambda$_connect$0(SlaveComputer.java:296)
+	at jenkins.util.ContextResettingExecutorService$2.call(ContextResettingExecutorService.java:46)
+	at jenkins.security.ImpersonatingExecutorService$2.call(ImpersonatingExecutorService.java:71)
+	at java.util.concurrent.FutureTask.run(FutureTask.java:266)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1149)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:624)
+	at java.lang.Thread.run(Thread.java:748)
+2020-07-17 04:29:25.859+0000 [id=119]	INFO	o.c.j.p.k.KubernetesSlave#_terminate: Terminating Kubernetes instance for agent pipline-1-9f526-wq9vs-qrlg2
+FATAL: Computer for agent is null: pipline-1-9f526-wq9vs-qrlg2
+2020-07-17 04:29:25.863+0000 [id=119]	SEVERE	o.c.j.p.k.KubernetesSlave#_terminate: Computer for agent is null: pipline-1-9f526-wq9vs-qrlg2
+2020-07-17 04:29:34.645+0000 [id=24]	INFO	hudson.slaves.NodeProvisioner#lambda$update$6: pipline-1-9f526-wq9vs-78v61 provisioning successfully completed. We have now 2 computer(s)
+2020-07-17 04:29:34.652+0000 [id=119]	INFO	o.c.j.p.k.KubernetesLauncher#launch: Created Pod: kube-ops/pipline-1-9f526-wq9vs-78v61
+2020-07-17 04:29:34.668+0000 [id=177]	WARNING	i.f.k.c.d.i.WatchConnectionManager$1#onFailure: Exec Failure: HTTP 403, Status: 403 - events is forbidden: User "system:serviceaccount:kube-ops:jenkins" cannot watch resource "events" in API group "" in the namespace "kube-ops"
+java.net.ProtocolException: Expected HTTP 101 response but was '403 Forbidden'
+	at okhttp3.internal.ws.RealWebSocket.checkResponse(RealWebSocket.java:229)
+	at okhttp3.internal.ws.RealWebSocket$2.onResponse(RealWebSocket.java:196)
+	at okhttp3.RealCall$AsyncCall.execute(RealCall.java:203)
+	at okhttp3.internal.NamedRunnable.run(NamedRunnable.java:32)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1149)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:624)
+	at java.lang.Thread.run(Thread.java:748)
+2020-07-17 04:29:34.670+0000 [id=119]	INFO	o.c.j.p.k.KubernetesLauncher#eventWatch: Cannot watch events on kube-ops/pipline-1-9f526-wq9vs-78v61
+Also:   java.lang.Throwable: waiting here
+		at io.fabric8.kubernetes.client.utils.Utils.waitUntilReady(Utils.java:144)
+		at io.fabric8.kubernetes.client.dsl.internal.WatchConnectionManager.waitUntilReady(WatchConnectionManager.java:341)
+		at io.fabric8.kubernetes.client.dsl.base.BaseOperation.watch(BaseOperation.java:755)
+		at io.fabric8.kubernetes.client.dsl.base.BaseOperation.watch(BaseOperation.java:739)
+		at io.fabric8.kubernetes.client.dsl.base.BaseOperation.watch(BaseOperation.java:70)
+		at org.csanchez.jenkins.plugins.kubernetes.KubernetesLauncher.eventWatch(KubernetesLauncher.java:230)
+		at org.csanchez.jenkins.plugins.kubernetes.KubernetesLauncher.launch(KubernetesLauncher.java:138)
+		at hudson.slaves.SlaveComputer.lambda$_connect$0(SlaveComputer.java:296)
+		at jenkins.util.ContextResettingExecutorService$2.call(ContextResettingExecutorService.java:46)
+		at jenkins.security.ImpersonatingExecutorService$2.call(ImpersonatingExecutorService.java:71)
+		at java.util.concurrent.FutureTask.run(FutureTask.java:266)
+io.fabric8.kubernetes.client.KubernetesClientException: events is forbidden: User "system:serviceaccount:kube-ops:jenkins" cannot watch resource "events" in API group "" in the namespace "kube-ops"
+	at io.fabric8.kubernetes.client.dsl.internal.WatchConnectionManager$1.onFailure(WatchConnectionManager.java:203)
+	at okhttp3.internal.ws.RealWebSocket.failWebSocket(RealWebSocket.java:571)
+	at okhttp3.internal.ws.RealWebSocket$2.onResponse(RealWebSocket.java:198)
+	at okhttp3.RealCall$AsyncCall.execute(RealCall.java:203)
+	at okhttp3.internal.NamedRunnable.run(NamedRunnable.java:32)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1149)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:624)
+	at java.lang.Thread.run(Thread.java:748)
+2020-07-17 04:29:35.802+0000 [id=187]	INFO	h.TcpSlaveAgentListener$ConnectionHandler#run: Accepted JNLP4-connect connection #3 from /10.244.2.43:50904
+2020-07-17 04:29:36.353+0000 [id=128]	INFO	o.c.j.p.k.p.r.Reaper$TerminateAgentOnContainerTerminated#lambda$onEvent$1: kube-ops/pipline-1-9f526-wq9vs-78v61 Container docker was just terminated, so removing the corresponding Jenkins agent
+2020-07-17 04:29:36.354+0000 [id=128]	INFO	o.c.j.p.k.KubernetesSlave#_terminate: Terminating Kubernetes instance for agent pipline-1-9f526-wq9vs-78v61
+Terminated Kubernetes instance for agent kube-ops/pipline-1-9f526-wq9vs-78v61
+2020-07-17 04:29:36.372+0000 [id=128]	INFO	o.c.j.p.k.KubernetesSlave#deleteSlavePod: Terminated Kubernetes instance for agent kube-ops/pipline-1-9f526-wq9vs-78v61
+Disconnected computer pipline-1-9f526-wq9vs-78v61
+2020-07-17 04:29:36.372+0000 [id=128]	INFO	o.c.j.p.k.KubernetesSlave#_terminate: Disconnected computer pipline-1-9f526-wq9vs-78v61
+2020-07-17 04:29:36.890+0000 [id=159]	INFO	j.s.DefaultJnlpSlaveReceiver#channelClosed: Computer.threadPoolForRemoting [#29] for pipline-1-9f526-wq9vs-78v61 terminated: java.nio.channels.ClosedChannelException
+2020-07-17 04:29:36.893+0000 [id=152]	INFO	hudson.remoting.Request$2#run: Failed to send back a reply to the request hudson.remoting.Request$2@14b6236a: hudson.remoting.ChannelClosedException: Channel "hudson.remoting.Channel@4d4da13a:JNLP4-connect connection from 10.244.2.43/10.244.2.43:50904": channel is already closed
+2020-07-17 04:29:44.573+0000 [id=31]	INFO	o.c.j.p.k.KubernetesCloud#provision: Excess workload after pending Kubernetes agents: 1
+2020-07-17 04:29:44.573+0000 [id=31]	INFO	o.c.j.p.k.KubernetesCloud#provision: Template for label pipline_1-9f526: pipline_1-9f526-wq9vs
+2020-07-17 04:29:44.698+0000 [id=119]	WARNING	o.c.j.p.k.KubernetesLauncher#launch: Error in provisioning; agent=KubernetesSlave name: pipline-1-9f526-wq9vs-78v61, template=PodTemplate{, name='pipline_1-9f526-wq9vs', namespace='kube-ops', label='pipline_1-9f526', nodeUsageMode=EXCLUSIVE, workspaceVolume=EmptyDirWorkspaceVolume [memory=false], volumes=[HostPathVolume [mountPath=/var/run/docker.sock, hostPath=/var/run/docker.sock]], containers=[ContainerTemplate{name='docker', image='docker'}], annotations=[org.csanchez.jenkins.plugins.kubernetes.PodAnnotation@aab9c821, org.csanchez.jenkins.plugins.kubernetes.PodAnnotation@c92c82e4]}
+java.lang.IllegalStateException: Pod is no longer available: kube-ops/pipline-1-9f526-wq9vs-78v61
+	at org.csanchez.jenkins.plugins.kubernetes.AllContainersRunningPodWatcher.periodicAwait(AllContainersRunningPodWatcher.java:125)
+	at org.csanchez.jenkins.plugins.kubernetes.AllContainersRunningPodWatcher.periodicAwait(AllContainersRunningPodWatcher.java:154)
+	at org.csanchez.jenkins.plugins.kubernetes.AllContainersRunningPodWatcher.await(AllContainersRunningPodWatcher.java:94)
+	at org.csanchez.jenkins.plugins.kubernetes.KubernetesLauncher.launch(KubernetesLauncher.java:140)
+	at hudson.slaves.SlaveComputer.lambda$_connect$0(SlaveComputer.java:296)
+	at jenkins.util.ContextResettingExecutorService$2.call(ContextResettingExecutorService.java:46)
+	at jenkins.security.ImpersonatingExecutorService$2.call(ImpersonatingExecutorService.java:71)
+	at java.util.concurrent.FutureTask.run(FutureTask.java:266)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1149)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:624)
+	at java.lang.Thread.run(Thread.java:748)
+2020-07-17 04:29:44.700+0000 [id=119]	INFO	o.c.j.p.k.KubernetesSlave#_terminate: Terminating Kubernetes instance for agent pipline-1-9f526-wq9vs-78v61
+2020-07-17 04:29:44.716+0000 [id=119]	SEVERE	o.c.j.p.k.KubernetesSlave#_terminate: Computer for agent is null: pipline-1-9f526-wq9vs-78v61
+FATAL: Computer for agent is null: pipline-1-9f526-wq9vs-78v61
